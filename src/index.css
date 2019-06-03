@@ -8,5 +8,25 @@ html {
 
 body {
   margin: 0;
-  min-height: 100%;
+  max-height: 1000vh;
+  background-color: antiquewhite;
+}
+h1 {
+  text-align: center;
+  margin: 0;
+  /* color: antiquewhite; */
+}
+h2 {
+  /* color: antiquewhite; */
+}
+.black {
+  color: black;
+}
+.three-buttons {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
 }
