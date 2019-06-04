@@ -15,7 +15,7 @@ export default function Colors() {
   let rdm100 = () => {
     return Math.random() * 100
   }
-  const newLocal = 0 + Math.abs(sValue - 50);
+  const newLocal = 0 + Math.abs(sValue - 50)
   const randomIz = () => {
     setLigV(rdm100)
     setSatV(rdm100)
@@ -24,17 +24,29 @@ export default function Colors() {
   const [hValue, setHueV] = useState(rdm359)
   const [sValue, setSatV] = useState(rdm100)
   const [lValue, setLigV] = useState(rdm100)
+  const [aValue, setOpV] = useState(0.3)
   // console.log({sValue, hValue, lValue})
+  let style = {
+    color: `hsl(${Math.abs(hValue - 180)},${Math.abs(
+      sValue - 50
+    )},${Math.abs(lValue - 50)})`
+  }
   return (
     <body>
-      <main
-        style={{
-          backgroundColor: ` hsl(${hValue},${sValue}%,${lValue}%)`
-        }}
-      >
-        <HelloWorld style={{ color: `hsl(${() =>Math.abs(hValue - 180)},${() =>Math.abs(sValue -50)},${() =>Math.abs(lValue -50)})`}}/>
+      <main>
+        <HelloWorld />
         <div className="three-buttons">
-          <h2>
+          <button style={{
+          backgroundColor: ` hsla(${hValue},${sValue}%,${lValue}%,${aValue})`
+        }}
+            onClick={() => {
+              randomIz()
+            }}
+          ><h1>Click Inside This Box <br/>To
+            Randomize Settings<br/>Opacity Is Constant</h1>
+          <h2
+            style={style}
+            >
             Hue {Math.ceil(hValue)}˚
           </h2>
           <div>
@@ -46,7 +58,7 @@ export default function Colors() {
               name="hue"
               step="1"
               value={hValue}
-            />
+              />
           </div>
           <h2>Saturation {Math.ceil(sValue)}%</h2>
           <div>
@@ -58,7 +70,7 @@ export default function Colors() {
               name="saturation"
               step="1"
               value={sValue}
-            />
+              />
           </div>
           <h2>Lightness {Math.ceil(lValue)}%</h2>
           <div>
@@ -70,15 +82,21 @@ export default function Colors() {
               name="lightness"
               step="1"
               value={lValue}
-            />
+              />
           </div>
-          <button
-            onClick={() => {
-              randomIz()
-            }}
-          >
-            Randomize
-          </button>
+          <h2>Opacity {Math.round(100 * aValue)}%</h2>
+          <div>
+            <input
+              onChange={event => setOpV(event.target.value)}
+              type="range"
+              min="0"
+              max="1"
+              name="lightness"
+              step="0.01"
+              value={aValue}
+              />
+          </div>
+              </button>
         </div>
       </main>
     </body>

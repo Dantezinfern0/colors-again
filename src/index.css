@@ -1,15 +1,17 @@
 :root {
-  font: 16px / 1 sans-serif;
+  font: 24px / 1 sans-serif;
 }
 
 html {
   height: 100%;
+  background-image: url('./pics/q65pAg.jpg');
+  image-orientation: inherit;
+  image-resolution: 50%;
+  color: brown;
 }
 
 body {
   margin: 0;
-  max-height: 1000vh;
-  background-color: antiquewhite;
 }
 h1 {
   text-align: center;
@@ -29,4 +31,9 @@ h2 {
   justify-content: center;
   align-items: center;
 
+}
+button {
+  padding: 4rem;      
+  font-style: oblique;
+  color: brown;
 }
