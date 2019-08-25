@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class HelloWorld extends Component {
+class Title extends Component {
   render() {
     return <h1>ColorChanger</h1>
   }

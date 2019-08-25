@@ -16,10 +16,17 @@ body {
 h1 {
   text-align: center;
   margin: 0;
-  /* color: antiquewhite; */
 }
-h2 {
-  /* color: antiquewhite; */
+button {
+  padding: 4rem;
+  font-style: oblique;
+  color: brown;
+  margin: 1rem;
+}
+.flex-it {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .black {
   color: black;
@@ -30,10 +37,6 @@ h2 {
   align-content: center;
   justify-content: center;
   align-items: center;
-
-}
-button {
-  padding: 4rem;      
-  font-style: oblique;
-  color: brown;
+  background-color: black;
+  padding: 1rem;
 }
