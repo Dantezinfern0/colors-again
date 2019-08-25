@@ -4,4 +4,4 @@
 
 # There is a random color button and an Opacity (Alpha) setting as well with a picture in the background from which to judge the opacity.
 
-# This project was built with REACT.js
+# This project was built with REACT.js 'Hooks'
