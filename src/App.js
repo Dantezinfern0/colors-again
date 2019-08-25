@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Component } from 'react'
 import Title from './components/Title'
+
 export default function Colors() {
   let rdm359 = () => {
     return Math.random() * 359
@@ -24,7 +25,7 @@ export default function Colors() {
   }
   return (
     <>
-      <HelloWorld />
+     <Title />
       <main className="flex-it">
         <div className="three-buttons">
           <h6 style={style}>Hue {Math.ceil(hValue)}˚</h6>

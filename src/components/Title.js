@@ -6,4 +6,4 @@ class Title extends Component {
   }
 }
 
-export default HelloWorld
+export default Title
